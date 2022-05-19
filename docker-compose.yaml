@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+services:
+  project-jenkins-test:
+    build: .
+    image: project-jenkins-test:latest
+    container_name: project-jenkins-test
+    environment:
+      - USER=${ARG1}
+      - USER2=${ARG2}
+    volumes:
+      - ~/Documents/Riot/ETG/gamelogs:/var/gamelogs
