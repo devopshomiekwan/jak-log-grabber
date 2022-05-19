@@ -6,9 +6,6 @@ pipeline {
 				sh 'docker-compose version'
 			}
 		}
-		
-	}
-	stages {
 		stage("Jenkins Test") {
 			steps{
 				sh 'docker-compose up -d'
